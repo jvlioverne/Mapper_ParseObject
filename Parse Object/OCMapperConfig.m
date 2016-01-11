@@ -18,8 +18,23 @@
     [[ObjectMapper sharedInstance] setMappingProvider:inCodeMappingProvider];
     [[ObjectMapper sharedInstance] setLoggingProvider:commonLoggingProvider];
     
-    /******************* Alerts **********************/
+    /******************* mapping **********************/
     [inCodeMappingProvider mapFromDictionaryKey:@"zones" toPropertyKey:@"zones"
                                  withObjectType:[ZonesObject class] forClass:[ObjectResponse class]];
+
+//
+    [inCodeMappingProvider mapFromDictionaryKey:@"weater" toPropertyKey:@"weater"
+                                 withObjectType:[WeatherObject class] forClass:[WeatherResponse class]];
+
+    
+    //
+    [inCodeMappingProvider mapFromDictionaryKey:@"description" toPropertyKey:@"weather_description"
+                                 withObjectType:[NSString class] forClass:[WeatherObject class]];
+    
+
+    
+
 }
+
+
 @end

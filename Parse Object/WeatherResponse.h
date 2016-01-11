@@ -13,4 +13,6 @@
 @property (nonatomic,strong) NSString *dt;
 @property (nonatomic,strong) NSString *ID;
 
+@property (nonatomic,strong) NSMutableArray *weather;
+
 @end

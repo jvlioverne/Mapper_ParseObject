@@ -54,10 +54,16 @@
 }
 
 - (void) getWeather {
+    
     mjsonWeather = [WebServices getWeather];
     print(NSLog(@"mjsonWeather = %@", mjsonWeather))
     WeatherResponse *weaterResponse = [Parser parseWeatherResponse];
     print(NSLog(@"weaterResponse = %@", weaterResponse.base))
+ 
+    int size = (int)[weaterResponse.weather count];
+    print(NSLog(@"size = %d", size))
+    NSString *description = ((WeatherObject*) weaterResponse.weather[0]).weather_description;
+    print(NSLog(@"description = %@", description));
     
 }
 
