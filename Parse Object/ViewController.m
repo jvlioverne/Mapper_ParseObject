@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self getRemoteData];
+    [self getWeather];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,15 +51,11 @@
         print(NSLog(@"name = %@", name))
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+}
+
+- (void) getWeather {
+    mjsonWeather = [WebServices getWeather];
+    print(NSLog(@"mjsonWeather = %@", mjsonWeather))
     
 }
 
